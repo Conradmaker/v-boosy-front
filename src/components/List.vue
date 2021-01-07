@@ -2,7 +2,7 @@
     <section class="inner">
         <h2>{{title}}</h2>
         <ul>
-            <list-item  v-for='item in lists' :key="item.title"  :item='item'/>
+            <list-item  v-for='item in lists' :key="item.isbn"  :item='item'/>
         </ul>
     </section>
 </template>
@@ -16,7 +16,8 @@ export default {
   components: {
     ListItem
   },
-  created () {
+  mounted () {
+    console.log(this.lists)
   },
   data () {
     return {

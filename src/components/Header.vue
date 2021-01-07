@@ -5,7 +5,7 @@
         </div>
         <div class="search__box">
             <input type="text" :placeholder="placeholder" :value="searchValue" @input="onChange($event)" @keydown.enter="onSubmit">
-            <i class="material-icons">search</i>
+            <i class="material-icons" @click="onSubmit">search</i>
         </div>
         <ul class="btn__wrapper">
             <li @click='loginOpen=true'>LOGIN</li>
@@ -32,10 +32,18 @@ export default {
       this.searchValue = e.target.value
     },
     onSubmit (e) {
-      alert(this.searchValue)
+      const isValid = this.searchValue.trim() && this.searchValue.length !== 0
+      if (isValid) {
+        this.$router.push(`/search/${this.searchValue}`).catch(err => {
+          if (err.name === 'NavigationDuplicated') {
+            console.log('같은 라우터 요청')
+          }
+        })
+      } else {
+        alert('검색어를 입력해 주세요')
+      }
     },
     closeModal () {
-      console.log('asd')
       this.loginOpen = false
     }
   }
