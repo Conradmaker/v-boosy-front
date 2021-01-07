@@ -1,7 +1,7 @@
 <template>
     <li>
         <div class="image__box">
-            <img :src="item.src" alt="">
+            <img :src="item.coverLargeUrl" alt="">
         </div>
         <h3>{{item.title}}</h3>
         <p>{{item.author}}</p>
@@ -25,15 +25,17 @@ export default {
   computed: {
   },
   mounted () {
-    console.log(this.item)
   }
 }
 </script>
 <style lang="scss" scoped>
 li{
+  cursor: pointer;
+    margin-bottom:40px;
     color:black;
     display:flex;
     flex-direction: column;
+    width: 140px;
     .image__box {
     transition: all 0.3s;
     width: 140px;

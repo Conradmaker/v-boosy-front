@@ -17,6 +17,7 @@
         </div>
     </div>
 </template>
+
 <script>
 import cButton from './common/CButton.vue'
 export default {
@@ -46,6 +47,7 @@ export default {
   }
 }
 </script>
+
 <style lang="scss">
     .modal__container{
         z-index: 9999;

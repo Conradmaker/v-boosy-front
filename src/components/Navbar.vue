@@ -1,22 +1,22 @@
 <template>
     <nav class="inner">
         <ul>
-            <li>
+            <router-link to='/' tag='li'>
                 <span>Home</span>
                 <i></i>
-            </li>
-            <li>
+            </router-link>
+            <router-link to='/' tag='li' >
                 <span>Bestseller</span>
                 <i></i>
-            </li>
-            <li>
+            </router-link>
+            <router-link to='/' tag='li'>
                 <span>Catagory</span>
                 <i></i>
-            </li>
-            <li>
+            </router-link>
+            <router-link to='/about' tag='li'>
                 <span>About</span>
                 <i></i>
-            </li>
+            </router-link>
         </ul>
     </nav>
 </template>
