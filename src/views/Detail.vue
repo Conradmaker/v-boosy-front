@@ -3,6 +3,7 @@
   <div class="detail">
       <detail-summary :item='item'/>
       <detail-info :item='item'/>
+      <detail-summary :item='item'/>
       <detail-nav/>
   </div>
 </div>

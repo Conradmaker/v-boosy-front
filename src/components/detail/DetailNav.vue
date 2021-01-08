@@ -1,15 +1,15 @@
 <template>
     <ul>
         <li>
-            <i :class="!scrollValid?'nav-act':null">1</i>
+            <i :class="scrollValid===0?'nav-act':null">1</i>
             <span>ABOUT</span>
         </li>
         <li>
-            <i :class="scrollValid?'nav-act':null">2</i>
+            <i :class="scrollValid===1?'nav-act':null">2</i>
             <span>MORE</span>
         </li>
         <li>
-            <i>3</i>
+            <i :class="scrollValid===2?'nav-act':null">3</i>
             <span>PURCHASE</span>
         </li>
     </ul>
@@ -18,16 +18,18 @@
 export default {
   data () {
     return {
-      scrollValid: false
+      scrollValid: 0
     }
   },
   methods: {
     scrollEvent () {
-      const valid = (document.body.clientHeight / 2) < window.pageYOffset
-      if (valid) {
-        this.scrollValid = true
-      } else {
-        this.scrollValid = false
+      const valid = (document.documentElement.clientHeight / 3)
+      if (window.pageYOffset >= valid * 4) {
+        this.scrollValid = 2
+      } else if (valid * 5 > window.pageYOffset && window.pageYOffset >= valid) {
+        this.scrollValid = 1
+      } else if (valid * 3 > window.pageYOffset) {
+        this.scrollValid = 0
       }
     }
   },
