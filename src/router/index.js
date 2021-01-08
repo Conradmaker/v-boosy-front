@@ -2,6 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import Search from '../views/Search.vue'
+import Detail from '../views/Detail.vue'
 
 Vue.use(VueRouter)
 
@@ -14,11 +15,19 @@ const routes = [
   {
     path: '/search/:id',
     name: 'Search',
+    meta: { title: 'BOOKSY | SEARCH' },
     component: Search
+  },
+  {
+    path: '/detail/:id',
+    name: 'Detail',
+    // meta: { title: 'BOOKSY | DETAIL' },
+    component: Detail
   },
   {
     path: '/about',
     name: 'About',
+    meta: { title: 'BOOKSY | ABOUT' },
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   }
 ]
@@ -29,4 +38,10 @@ const router = new VueRouter({
   routes
 })
 
+// const DEFAULT_TITLE = 'BOOKSY'
+
+// router.beforeEach((to, from, next) => {
+//   document.title = to.meta.title || DEFAULT_TITLE
+//   next()
+// })
 export default router

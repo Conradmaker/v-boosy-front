@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <Header/>
-    <Navbar/>
-    <router-view/>
+    <div class="headers">
+      <Header/>
+      <Navbar/>
+    </div>
+    <router-view class="router-v"/>
   </div>
 </template>
 <script>
@@ -15,8 +17,16 @@ export default {
 </script>
 <style lang="scss">
 #app {
+  width:100%;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   list-style: none;
+  .headers{
+    position:fixed;
+    width:100%;
+  }
+}
+.router-v{
+  padding-top:100px;
 }
 *{
   box-sizing: border-box;

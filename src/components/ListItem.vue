@@ -1,5 +1,5 @@
 <template>
-    <li>
+    <li @click="goDetail">
         <div class="image__box">
             <img :src="item.coverLargeUrl" alt="">
         </div>
@@ -24,7 +24,10 @@ export default {
   },
   computed: {
   },
-  mounted () {
+  methods: {
+    goDetail () {
+      this.$router.push(`detail/${this.item.isbn}`)
+    }
   }
 }
 </script>
