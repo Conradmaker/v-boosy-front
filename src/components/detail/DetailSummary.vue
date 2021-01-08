@@ -16,6 +16,12 @@
         <article>
           <b>{{item.title}}</b>
           <span>{{item.author}}</span>
+          <a href="#detail-summary">
+              더보기<br/>
+              <span class="material-icons">
+                keyboard_arrow_down
+              </span>
+          </a>
         </article>
     </section>
 </template>
@@ -27,8 +33,17 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
+@keyframes anchor {
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(5px);
+    }
+}
   section{
         width: 100%;
+        height:100vh;
         background: #fff;
   h1 {
     text-align: center;
@@ -133,6 +148,14 @@ export default {
       margin-bottom: 24px;
       font-size: 24px;
       font-weight: bold;
+    }
+    a{
+        color:#555;
+        text-decoration: none;
+        margin-top:60px;
+        font-size: 20px;
+        text-align: center;
+        animation: anchor 0.5s ease-in-out alternate infinite;
     }
   }
   }

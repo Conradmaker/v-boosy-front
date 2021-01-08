@@ -22,13 +22,15 @@ export default {
   list-style: none;
   .headers{
     position:fixed;
-    width:100%;
+    right: 0;
+    left: 0;
   }
 }
 .router-v{
   padding-top:100px;
 }
 *{
+    scroll-behavior: smooth;
   box-sizing: border-box;
 }
 .inner{

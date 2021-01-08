@@ -2,14 +2,18 @@
 <div>
   <div class="detail">
       <detail-summary :item='item'/>
+      <detail-info :item='item'/>
+      <detail-nav/>
   </div>
 </div>
 </template>
 <script>
 import axios from 'axios'
 import DetailSummary from '../components/detail/DetailSummary.vue'
+import DetailInfo from '../components/detail/DetailInfo.vue'
+import DetailNav from '../components/detail/DetailNav.vue'
 export default {
-  components: { DetailSummary },
+  components: { DetailSummary, DetailInfo, DetailNav },
   data () {
     return {
       item: {},
@@ -40,7 +44,7 @@ export default {
 </script>
 <style lang="scss" scoped>
 .detail{
-    width:100vw;
+    width:100%;
     height:100vh;
 }
 </style>
