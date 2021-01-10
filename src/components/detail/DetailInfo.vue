@@ -19,7 +19,7 @@
                 </li>
                 <li>
                     <small>가격</small>
-                    <strong>2020-04-23</strong>
+                    <strong><b>{{item.priceStandard}}</b>{{item.priceSales}}</strong>
                 </li>
             </ul>
         </div>
@@ -98,6 +98,12 @@ export default {
                     }
                     strong{
                         font-size: 18px;
+                        b{
+                            text-decoration: line-through;
+                            display:block;
+                            margin-bottom:5px;
+                            font-size: 13px;
+                        }
                     }
                 }
             }
