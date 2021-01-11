@@ -1,14 +1,14 @@
 <template>
     <ul>
-        <li>
+        <li @click='scroll(0)'>
             <i :class="scrollValid===0?'nav-act':null">1</i>
             <span>ABOUT</span>
         </li>
-        <li>
+        <li @click='scroll(1)'>
             <i :class="scrollValid===1?'nav-act':null">2</i>
             <span>MORE</span>
         </li>
-        <li>
+        <li @click='scroll(2)'>
             <i :class="scrollValid===2?'nav-act':null">3</i>
             <span>PURCHASE</span>
         </li>
@@ -16,6 +16,9 @@
 </template>
 <script>
 export default {
+  props: {
+    scroll: Function
+  },
   data () {
     return {
       scrollValid: 0
@@ -65,6 +68,10 @@ ul{
             background: #D08381;
             color:#fff;
             transition: all 0.3s;
+            cursor: pointer;
+            &:hover{
+              background: #744442;
+            }
         }
         .nav-act{
             background: #FBDFD1;

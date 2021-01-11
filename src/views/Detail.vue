@@ -4,7 +4,7 @@
       <detail-summary :item='item'/>
       <detail-info :item='item'/>
       <detail-summary :item='item'/>
-      <detail-nav/>
+      <detail-nav :scroll='onScroll'/>
   </div>
 </div>
 </template>
@@ -22,10 +22,41 @@ export default {
     }
   },
   methods: {
-    ...mapActions('book', ['loadDetail'])
+    ...mapActions('book', ['loadDetail']),
+    onScroll (number) {
+      console.log(number)
+      switch (number) {
+        case 0:
+          scrollTo(0, 0, {
+            ease: 'out-bounce',
+            duration: 1500
+          })
+          break
+        case 1:
+          scrollTo(0, 986, {
+            ease: 'out-bounce',
+            duration: 1500
+          })
+          break
+        case 2:
+          scrollTo(0, document.documentElement.scrollHeight, {
+            ease: 'out-bounce',
+            duration: 1500
+          })
+          break
+      }
+    }
   },
+
   mounted () {
     this.loadDetail(this.isbn)
+    scrollTo(0, 0, {
+      ease: 'out-bounce',
+      duration: 1500
+    })
+    window.addEventListener('scroll', () => {
+      console.log(window.pageYOffset)
+    })
   }
 }
 </script>

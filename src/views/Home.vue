@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <Banner/>
-    <List title='Popular Now' :lists = 'lists'/>
+    <transition name="fade">
+      <List v-if="isNotEmpty" title='Popular Now' :lists = 'lists'/>
+    </transition>
   </div>
 </template>
 
@@ -17,10 +19,14 @@ export default {
   },
   data () {
     return {
+      show: false
     }
   },
   computed: {
-    ...mapState('book', ['lists'])
+    ...mapState('book', ['lists']),
+    isNotEmpty () {
+      return this.lists.length !== 0
+    }
   },
   methods: {
     ...mapActions('book', ['loadMain'])
