@@ -9,20 +9,30 @@
                 <span>Bestseller</span>
                 <i></i>
             </router-link>
-            <router-link to='/' tag='li'>
+            <li @click='cataOpen = !cataOpen'>
                 <span>Catagory</span>
                 <i></i>
-            </router-link>
+            </li>
             <router-link to='/about' tag='li'>
                 <span>About</span>
                 <i></i>
             </router-link>
         </ul>
+
+        <catagory  :is-show='cataOpen'/>
     </nav>
 </template>
 <script>
+import Catagory from './common/Catagory.vue'
 export default {
-
+  components: {
+    Catagory
+  },
+  data () {
+    return {
+      cataOpen: false
+    }
+  }
 }
 </script>
 <style lang="scss">

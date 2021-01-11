@@ -21,6 +21,8 @@ export default {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   list-style: none;
   .headers{
+    z-index: 2;
+    background: #fff;
     position:fixed;
     right: 0;
     left: 0;
@@ -36,6 +38,7 @@ export default {
 .inner{
   max-width: 900px;
   margin:0 auto;
+  z-index: 1;
 }
 .router-link-exact-active{
   span{

@@ -24,7 +24,6 @@ export default {
   methods: {
     ...mapActions('book', ['loadDetail']),
     onScroll (number) {
-      console.log(number)
       switch (number) {
         case 0:
           scrollTo(0, 0, {
@@ -53,9 +52,6 @@ export default {
     scrollTo(0, 0, {
       ease: 'out-bounce',
       duration: 1500
-    })
-    window.addEventListener('scroll', () => {
-      console.log(window.pageYOffset)
     })
   }
 }

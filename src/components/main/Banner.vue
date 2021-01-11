@@ -6,15 +6,17 @@
                 <p>지금 사면 1+1입니다~</p>
                 <button>더보기</button>
             </article>
-            <img src="../../assets/banner.png" alt="">
+            <img src="../../assets/banner.png" alt="123">
         </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
+section{
+    z-index: 1;
+}
 .inner{
     height: 220px;
-    position: relative;
     display:flex;
     align-items: center;
     margin-top: 30px;
@@ -47,10 +49,9 @@
         }
     }
     img{
-        position: absolute;
+        z-index: 0;
         width:340px;
-        right: 50px;
-        bottom: 10px;
+        transform:translate(180px,-27px);
     }
 }
 </style>
