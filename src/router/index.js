@@ -22,7 +22,7 @@ const routes = [
   {
     path: '/detail/:id',
     name: 'Detail',
-    // meta: { title: 'BOOKSY | DETAIL' },
+    meta: { title: 'BOOKSY | DETAIL' },
     component: Detail
   },
   {
@@ -44,10 +44,10 @@ const router = new VueRouter({
   routes
 })
 
-// const DEFAULT_TITLE = 'BOOKSY'
+const DEFAULT_TITLE = 'BOOKSY'
 
-// router.beforeEach((to, from, next) => {
-//   document.title = to.meta.title || DEFAULT_TITLE
-//   next()
-// })
+router.beforeEach((to, from, next) => {
+  document.title = to.meta.title || DEFAULT_TITLE
+  next()
+})
 export default router
