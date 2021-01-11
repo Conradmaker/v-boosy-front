@@ -32,6 +32,11 @@ export default {
     return {
       cataOpen: false
     }
+  },
+  watch: {
+    $route () {
+      this.cataOpen = false
+    }
   }
 }
 </script>

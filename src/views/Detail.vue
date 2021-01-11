@@ -46,7 +46,6 @@ export default {
       }
     }
   },
-
   mounted () {
     this.loadDetail(this.isbn)
     scrollTo(0, 0, {

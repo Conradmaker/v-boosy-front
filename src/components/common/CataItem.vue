@@ -1,12 +1,17 @@
 <template>
-    <router-link tag="li" to='/123'>
+    <li @click="searchCate">
         {{cata.name}}
-    </router-link>
+    </li>
 </template>
 <script>
 export default {
   props: {
     cata: Object
+  },
+  methods: {
+    searchCate () {
+      this.$router.replace(`/category/${this.cata.id}?title=${this.cata.name}`)
+    }
   }
 }
 </script>

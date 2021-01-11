@@ -49,6 +49,14 @@ export default {
       } catch (e) {
         commit('assignError', e)
       }
+    },
+    async loadCategory ({ commit }, id) {
+      try {
+        const res = await axios.get(`/api/bestSeller.api?key=1BF59F57030886E0B9D3463D8697C390B5C9791830F090998C72A200E5322CD1&categoryId=${id}&output=json`)
+        commit('assignList', res.data.item)
+      } catch (e) {
+        commit('assignError', e)
+      }
     }
   }
 }
