@@ -5,7 +5,7 @@
                 <span>Home</span>
                 <i></i>
             </router-link>
-            <router-link to='/' tag='li' >
+            <router-link to='/bestseller' tag='li' >
                 <span>Bestseller</span>
                 <i></i>
             </router-link>

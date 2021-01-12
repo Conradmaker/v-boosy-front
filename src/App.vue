@@ -1,18 +1,13 @@
 <template>
   <div id="app">
-    <div class="headers">
-      <Header/>
-      <Navbar/>
-    </div>
+    <headers/>
     <router-view class="router-v"/>
   </div>
 </template>
 <script>
-import Header from './components/Header.vue'
-import Navbar from './components/Navbar.vue'
+import Headers from './components/Headers.vue'
 export default {
-  components: { Header, Navbar }
-
+  components: { Headers }
 }
 </script>
 <style lang="scss">
@@ -20,13 +15,6 @@ export default {
   width:100%;
   font-family: 'M PLUS Rounded 1c', sans-serif;
   list-style: none;
-  .headers{
-    z-index: 2;
-    background: #fff;
-    position:fixed;
-    right: 0;
-    left: 0;
-  }
 }
 .router-v{
   padding-top:100px;
