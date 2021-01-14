@@ -2,8 +2,8 @@
   publish = "dist"
   
 [[redirects]]
-  from = "/api"
-  to = "http://book.interpark.com/api"
+  from = "/api/*"
+  to = "https://book.interpark.com/api/:splat"
   status = 200
   force = true
   headers = {X-From = "Netlify"}
