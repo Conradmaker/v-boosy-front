@@ -1,7 +1,7 @@
 <template>
     <div class="banner">
         <div class="inner">
-            <img src="../../assets/gravity.gif" alt="" class="gif">
+            <img src="https://i.ibb.co/pRZPQH3/gravity.gif" alt="" class="gif">
             <img src="../../assets/logo.png" alt="">
             <p>어서와요 작은 책방</p>
             <clear-button :onClick='goMore'>둘러보기</clear-button>
