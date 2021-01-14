@@ -1,16 +1,16 @@
 <template>
   <div class="home">
-    <section class="visual-top">
+    <top class="visual-top">
       홈페이지
-    </section>
-    <section class="visual-bottom">
-      홈페이지2
-    </section>
+    </top>
   </div>
 </template>
 <script>
+import Top from '../components/home'
 export default {
-
+  components: {
+    Top
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -20,7 +20,7 @@ export default {
     padding-top:100px;
     height:100vh;
   }
-  .visual-bottom {
+  .bg-grad {
     background: linear-gradient(45deg, #aeecff, #ffffff, #c5ffca);
     background-size: 600% 600%;
     animation: GradientBackground 10s ease infinite;

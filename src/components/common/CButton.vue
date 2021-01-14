@@ -6,7 +6,6 @@
 <script>
 export default {
   props: {
-    msg: String,
     onClick: Function
   }
 }
