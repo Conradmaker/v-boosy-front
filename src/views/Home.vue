@@ -1,38 +1,45 @@
 <template>
   <div class="home">
-    <Banner/>
-    <transition name="fade">
-      <List v-if="isNotEmpty" title='Popular Now' :lists = 'lists'/>
-    </transition>
+    <section class="visual-top">
+      홈페이지
+    </section>
+    <section class="visual-bottom">
+      홈페이지2
+    </section>
   </div>
 </template>
-
 <script>
-import { mapState, mapActions } from 'vuex'
-import Banner from '../components/main/Banner.vue'
-import List from '../components/List'
 export default {
-  name: 'Home',
-  components: {
-    Banner,
-    List
-  },
-  data () {
-    return {
-      show: false
-    }
-  },
-  computed: {
-    ...mapState('book', ['lists']),
-    isNotEmpty () {
-      return this.lists.length !== 0
-    }
-  },
-  methods: {
-    ...mapActions('book', ['loadMain'])
-  },
-  mounted () {
-    this.loadMain()
-  }
+
 }
 </script>
+<style lang="scss" scoped>
+.home{
+  padding:0;
+  .visual-top{
+    padding-top:100px;
+    height:100vh;
+  }
+  .visual-bottom {
+    background: linear-gradient(45deg, #aeecff, #ffffff, #c5ffca);
+    background-size: 600% 600%;
+    animation: GradientBackground 10s ease infinite;
+    height:100vh;
+  }
+}
+
+@keyframes GradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+};
+
+</style>
