@@ -17,7 +17,6 @@ export default {
     ListItem
   },
   mounted () {
-    console.log(this.lists)
   },
   data () {
     return {

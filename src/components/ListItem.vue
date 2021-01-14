@@ -33,7 +33,7 @@ export default {
   },
   methods: {
     goDetail () {
-      this.$router.push(`detail/${this.item.isbn}`)
+      this.$router.push(`/detail/${this.item.isbn}`)
     }
   },
   mounted () {

@@ -29,7 +29,7 @@ export default {
     async loadMain ({ commit }) {
       try {
         const res = await axios.get(
-          '/api/bestSeller.api?key=1BF59F57030886E0B9D3463D8697C390B5C9791830F090998C72A200E5322CD1&categoryId=100&output=json'
+          `/api/bestSeller.api?key=${process.env.VUE_APP_API_KEY}&categoryId=100&output=json`
         )
         commit('assignList', res.data.item)
         commit('assignRank', true)
@@ -40,7 +40,7 @@ export default {
     async loadDetail ({ commit }, isbn) {
       try {
         const res = await axios.get(
-            `/api/search.api?key=1BF59F57030886E0B9D3463D8697C390B5C9791830F090998C72A200E5322CD1&query=${isbn}&output=json&queryType=isbn`
+            `/api/search.api?key=${process.env.VUE_APP_API_KEY}&query=${isbn}&output=json&queryType=isbn`
         )
         commit('assignItem', res.data.item[0])
         commit('assignRank', false)
@@ -50,7 +50,7 @@ export default {
     },
     async loadSearch ({ commit }, keyword) {
       try {
-        const res = await axios.get(`/api/search.api?key=1BF59F57030886E0B9D3463D8697C390B5C9791830F090998C72A200E5322CD1&query=${keyword}&output=json`)
+        const res = await axios.get(`/api/search.api?key=${process.env.VUE_APP_API_KEY}&query=${keyword}&output=json`)
         commit('assignList', res.data.item)
         commit('assignRank', false)
       } catch (e) {
@@ -59,7 +59,7 @@ export default {
     },
     async loadCategory ({ commit }, id) {
       try {
-        const res = await axios.get(`/api/bestSeller.api?key=1BF59F57030886E0B9D3463D8697C390B5C9791830F090998C72A200E5322CD1&categoryId=${id}&output=json`)
+        const res = await axios.get(`/api/bestSeller.api?key=${process.env.VUE_APP_API_KEY}&categoryId=${id}&output=json`)
         commit('assignList', res.data.item)
         commit('assignRank', true)
       } catch (e) {
