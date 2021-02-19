@@ -1,5 +1,5 @@
 <template>
-    <div class="headers" :class="{isClear,isTop:isTop}">
+    <div class="headers" :class="{isTop:isTop}">
         <Header/>
         <navbar/>
     </div>
