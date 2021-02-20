@@ -10,7 +10,6 @@
     </li>
 </template>
 <script>
-import { mapState } from 'vuex'
 import Score from './Score.vue'
 
 export default {
@@ -21,12 +20,10 @@ export default {
     item: Object,
     index: Number
   },
-  data () {
-    return {
-    }
-  },
   computed: {
-    ...mapState('book', ['isRank']),
+    isRank () {
+      return this.$store.state.book.isRank
+    },
     isTop () {
       return this.index < 5
     }
@@ -35,9 +32,6 @@ export default {
     goDetail () {
       this.$router.push(`/detail/${this.item.isbn}`)
     }
-  },
-  mounted () {
-    console.log(this.isTop)
   }
 }
 </script>

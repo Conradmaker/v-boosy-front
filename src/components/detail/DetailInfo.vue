@@ -32,14 +32,12 @@ export default {
   },
   computed: {
     desc () {
-      return this.item.description.replaceAll('.', '.<br/>')
+    //   return this.item.description.replaceAll('.', '.<br/>') replaceAll을 jest가 못쓰네
+      return this.item.description.replace(/\./gi, '.<br/>')
     },
     pubDate () {
       return this.item.pubDate.replace(/(.{4})/, '$1-').replace(/(.{7})/, '$1-')
     }
-  },
-  mounted () {
-    console.log(this.item)
   }
 }
 </script>

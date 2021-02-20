@@ -17,11 +17,6 @@ export default {
     Banner,
     List
   },
-  data () {
-    return {
-      show: false
-    }
-  },
   computed: {
     ...mapState('book', ['lists']),
     isNotEmpty () {

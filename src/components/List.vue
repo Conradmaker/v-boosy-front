@@ -15,13 +15,6 @@ export default {
   },
   components: {
     ListItem
-  },
-  mounted () {
-  },
-  data () {
-    return {
-
-    }
   }
 }
 </script>
