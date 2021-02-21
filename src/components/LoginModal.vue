@@ -25,7 +25,6 @@ export default {
   props: {},
   methods: {
     closeModal () {
-      console.log('123123')
       this.$emit('close-modal')
     },
     onChangeTitle () {
@@ -107,6 +106,9 @@ export default {
                 &:hover{
                     background: #605dbb;
                 }
+            }
+            button:nth-child(2){
+                cursor: no-drop;
             }
         }
     }

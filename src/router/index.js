@@ -5,6 +5,7 @@ import BestSeller from '../views/BestSeller.vue'
 import Search from '../views/Search.vue'
 import Detail from '../views/Detail.vue'
 import Category from '../views/Category.vue'
+import About from '../views/About.vue'
 
 Vue.use(VueRouter)
 
@@ -40,7 +41,7 @@ const routes = [
     path: '/about',
     name: 'About',
     meta: { title: 'BOOKSY | ABOUT' },
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    component: About
   }
 ]
 

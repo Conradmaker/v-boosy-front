@@ -90,5 +90,13 @@ header{
         align-items: center;
         gap:20px;
     }
+    ul{
+      li:nth-child(1){
+        cursor:pointer;
+      }
+      li:nth-child(2){
+        cursor:no-drop;
+      }
+    }
 }
 </style>
