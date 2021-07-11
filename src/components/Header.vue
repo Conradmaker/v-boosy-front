@@ -100,4 +100,18 @@ header{
       }
     }
 }
+@media screen and (max-width:700px) {
+  header{
+    height:auto;
+    flex-direction: column;
+    padding-top:15px;
+    .search__box{
+      margin-top: 10px;
+      max-width:100%;
+      input{
+        font-size: 15px;
+      }
+    }
+  }
+}
 </style>

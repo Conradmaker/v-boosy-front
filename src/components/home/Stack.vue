@@ -69,6 +69,7 @@ export default {
     }
     .bottom-container{
         display:flex;
+        padding: 30px 0;
         .box{
             flex:1;
             height:250px;

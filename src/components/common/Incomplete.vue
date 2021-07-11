@@ -25,4 +25,9 @@ export default {
            max-width:500px;
         }
     }
+    @media screen and (max-width:700px) {
+    .incomplete__container>img{
+      max-width:300px;
+    }
+}
 </style>

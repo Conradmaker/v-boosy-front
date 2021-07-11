@@ -39,7 +39,6 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-
 .headers{
     z-index: 2;
     background: rgba(255, 255, 255, 0.9);
@@ -52,7 +51,9 @@ export default {
 .isTop{
   background: none;
 }
-/* .isClear{
-  background: none;
-} */
+@media screen and (max-width:700px) {
+  .headers{
+    max-width:100vw;
+  }
+}
 </style>

@@ -83,4 +83,17 @@ export default {
     height:120px;
     opacity: 1;
 }
+
+@media screen and (max-width:700px) {
+    .catagory__container>.catagory__box{
+        overflow-x: scroll;
+        ul{
+        li{
+            padding: 0 10px;
+            white-space: nowrap;
+        }
+    }
+    }
+
+}
 </style>

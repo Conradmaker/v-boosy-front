@@ -55,4 +55,29 @@ section{
         transform:translate(180px,-27px);
     }
 }
+
+@media screen and (max-width:700px) {
+  .inner{
+      position:relative;
+      align-items: flex-start;
+      flex-direction: column;
+      article{
+          margin-top:20px;
+          margin-left:20px;
+          height:70px;
+          h1{
+              font-size: 20px;
+              white-space: nowrap;
+          }
+      }
+      img{
+        z-index: 0;
+        width:200px;
+        position:absolute;
+        bottom:10px;
+        right: 10px;
+        transform:translate(0px,0px);
+    }
+  }
+}
 </style>

@@ -41,4 +41,14 @@ export default {
         }
     }
 }
+
+@media screen and (max-width:700px) {
+ .banner{
+     .inner{
+         .gif{
+            max-width: 300px;
+         }
+     }
+ }
+}
 </style>

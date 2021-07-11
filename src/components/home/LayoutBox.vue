@@ -115,4 +115,16 @@ export default {
             }
         }
     }
+
+@media screen and (max-width:700px) {
+    .bottom-container{
+        .box{
+            width:100%;
+            border-top: 1px solid #81c4cf;
+        }
+        .box:nth-child(1){
+            border-top: none;
+        }
+    }
+}
 </style>

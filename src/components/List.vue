@@ -23,7 +23,7 @@ section{
     h2{
         margin:30px 0 20px 0;
         font-size: 20px;
-    }
+      }
     ul{
         display:flex;
         flex-wrap: wrap;
@@ -31,7 +31,22 @@ section{
         justify-content: space-between;
         li:first-child .top-rank{
         background: rgb(247, 247, 31);
-  }
+      }
     }
+}
+
+@media screen and (max-width:700px) {
+  section{
+    padding: 0 20px;
+    ul{
+        display:flex;
+        flex-wrap: wrap;
+        gap:20px;
+        justify-content: space-between;
+        li:first-child .top-rank{
+        background: rgb(247, 247, 31);
+      }
+    }
+  }
 }
 </style>

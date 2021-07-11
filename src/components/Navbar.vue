@@ -76,4 +76,12 @@ nav{
         }
     }
 }
+@media screen and (max-width:700px) {
+nav{
+    ul{
+        max-width:100%;
+        padding: 0 20px;
+    }
+}
+}
 </style>
