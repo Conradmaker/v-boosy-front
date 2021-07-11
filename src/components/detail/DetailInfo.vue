@@ -107,4 +107,41 @@ export default {
             }
         }
     }
+
+    @media screen and (max-width:700px) {
+        #detail-summary{
+            flex-direction: column;
+            padding:0;
+            .left__section{
+                padding:20px 10px 10px 10px;
+                article{
+                    width:100%;
+                }
+            }
+            .right__section{
+                flex:initial;
+                display:block;
+                ul{
+                    padding:20px 0;
+                    width:100%;
+                    margin:0;
+                    height:100%;
+                    align-items: center;
+                    justify-content: center;
+                    li{
+                        width:200px;
+                        margin:0;
+                        padding: 10px 0;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        small{
+                            margin:0;
+                            margin-right:20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
 </style>

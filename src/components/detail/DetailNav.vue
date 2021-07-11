@@ -83,4 +83,28 @@ ul{
         }
     }
 }
+    @media screen and (max-width:700px) {
+      ul{
+        background-color: rgba(255,255,255,.4);
+        flex-direction: row;
+        justify-content: space-around;
+        top:auto;
+        bottom:0px;
+        right:auto;
+        width:100%;
+        height:auto;
+        padding: 10px 0;
+        li{
+          flex-direction: column;
+          align-items: center;
+          flex:1;
+          i{
+            width:30px;
+            height: 30px;
+            transform:translateX(0%);
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
 </style>
