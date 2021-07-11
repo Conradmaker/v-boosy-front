@@ -28,29 +28,29 @@ describe('Header Components', () => {
     expect(wrapper.vm.$router.push).not.toBeCalled()
     expect(window.alert).toBeCalledWith('검색어를 입력해 주세요')
   })
-  test('loginOpen 트루면 모달 오픈', () => {
-    wrapper = shallowMount(Header, {
-      router,
-      data: () => ({
-        placeholder: '테스트',
-        searchValue: '테스트검색값',
-        loginOpen: true
-      })
-    })
-    expect(wrapper.find('login-modal-stub').exists()).toBe(true)
-  })
-  test('모달 닫을시 loginOpen = false', () => {
-    wrapper = shallowMount(Header, {
-      router,
-      data: () => ({
-        placeholder: '테스트',
-        searchValue: '테스트검색값',
-        loginOpen: true
-      })
-    })
-    wrapper.vm.closeModal()
-    expect(wrapper.vm.loginOpen).toBe(false)
-  })
+  // test('loginOpen 트루면 모달 오픈', () => {
+  //   wrapper = shallowMount(Header, {
+  //     router,
+  //     data: () => ({
+  //       placeholder: '테스트',
+  //       searchValue: '테스트검색값',
+  //       loginOpen: true
+  //     })
+  //   })
+  //   expect(wrapper.find('login-modal-stub').exists()).toBe(true)
+  // })
+  // test('모달 닫을시 loginOpen = false', () => {
+  //   wrapper = shallowMount(Header, {
+  //     router,
+  //     data: () => ({
+  //       placeholder: '테스트',
+  //       searchValue: '테스트검색값',
+  //       loginOpen: true
+  //     })
+  //   })
+  //   wrapper.vm.closeModal()
+  //   expect(wrapper.vm.loginOpen).toBe(false)
+  // })
   test('검색값이 있을시 router변경', () => {
     wrapper.vm.$router.push = jest.fn()
       .mockRejectedValueOnce({ name: 'NavigationDuplicated' })

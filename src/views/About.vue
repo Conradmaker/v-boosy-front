@@ -1,14 +1,17 @@
 <template>
   <div class="about">
-    <div class="inner">
-      <h1>This is an about page</h1>
-    </div>
+      <incomplete />
   </div>
 </template>
 <script>
-module.exports = {
+import Incomplete from '../components/common/Incomplete.vue'
+export default {
+  components: { Incomplete },
   props: {}
 }
 </script>
 <style lang="scss" scoped>
+.about{
+  padding:0;
+}
 </style>

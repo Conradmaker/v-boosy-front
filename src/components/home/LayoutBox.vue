@@ -8,22 +8,24 @@
       <div class="box">
           <h3>BEST SELLER</h3>
           <p>Enjoy the latest bestseller rankings <br>provided by Interpark!</p>
-          <clear-button>더보기</clear-button>
+          <router-link tag="div" to='bestseller'>
+              <clear-button>더보기</clear-button>
+          </router-link>
       </div>
       <div class="box">
           <h3>WHO MAKE?</h3>
           <p>Are you curious about <br>the front-end developer <br>Won-geun Yoo?</p>
-          <clear-button>더보기</clear-button>
+        <a target="about:blank" href="https://wongeun.xyz">
+            <clear-button >더보기</clear-button>
+        </a>
       </div>
       <div class="box">
           <h3>SEARCH</h3>
           <p>Supports integrated search <br>for domestic books.</p>
-          <clear-button>더보기</clear-button>
       </div>
       <div class="box">
           <h3>CATAGORY</h3>
           <p>You can also search <br>by 18 categories (to be added).</p>
-          <clear-button>더보기</clear-button>
       </div>
 
   </div>
@@ -36,6 +38,7 @@ export default {
   components: { ClearButton }
 
 }
+
 </script>
 <style lang="scss" scoped>
     .top-container{

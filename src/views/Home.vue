@@ -10,6 +10,9 @@ import Top from '../components/home'
 export default {
   components: {
     Top
+  },
+  mounted () {
+    window.scrollTo({ top: 0 })
   }
 }
 </script>

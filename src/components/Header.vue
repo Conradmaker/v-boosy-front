@@ -8,17 +8,17 @@
             <i class="material-icons" @click="onSubmit">search</i>
         </div>
         <ul class="btn__wrapper">
-            <li @click='loginOpen=true'>LOGIN</li>
-            <li>SIGNUP</li>
+            <!-- <li @click='loginOpen=true'>LOGIN</li>
+            <li>SIGNUP</li> -->
         </ul>
-    <login-modal v-if='loginOpen' v-on:close-modal='closeModal'/>
+    <!-- <login-modal v-if='loginOpen' v-on:close-modal='closeModal'/> -->
     </header>
 </template>
 <script>
-import LoginModal from './LoginModal.vue'
+// import LoginModal from './LoginModal.vue'
 export default {
   components: {
-    LoginModal
+    // LoginModal
   },
   data () {
     return {
@@ -89,6 +89,7 @@ header{
         display:flex;
         align-items: center;
         gap:20px;
+        width:123px;
     }
     ul{
       li:nth-child(1){

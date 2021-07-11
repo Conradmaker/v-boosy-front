@@ -54,11 +54,10 @@ export default {
     align-items: center;
     justify-content: center;
     transition: all 0.3s ease-in-out;
-    box-shadow: 0px 20px 10px -15px rgba(0, 0, 0, 0.507);
     .catagory__box{
         width:100%;
         padding:0 10px;
-        background: #fff;
+        background: rgba(255, 255, 255, 0.6);
         ul{
             max-width:100%;
             width:100%;

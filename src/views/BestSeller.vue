@@ -28,6 +28,7 @@ export default {
   },
   mounted () {
     this.loadMain()
+    window.scrollTo({ top: 0 })
   }
 }
 </script>

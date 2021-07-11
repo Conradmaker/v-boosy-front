@@ -3,7 +3,7 @@
   <div class="detail">
       <detail-summary :item='item'/>
       <detail-info :item='item'/>
-      <detail-summary :item='item'/>
+      <incomplete/>
       <detail-nav :scroll='onScroll'/>
   </div>
 </div>
@@ -13,8 +13,9 @@ import DetailSummary from '../components/detail/DetailSummary.vue'
 import DetailInfo from '../components/detail/DetailInfo.vue'
 import DetailNav from '../components/detail/DetailNav.vue'
 import { mapActions, mapState } from 'vuex'
+import Incomplete from '../components/common/Incomplete.vue'
 export default {
-  components: { DetailSummary, DetailInfo, DetailNav },
+  components: { DetailSummary, DetailInfo, DetailNav, Incomplete },
   computed: {
     ...mapState('book', ['item']),
     isbn () {

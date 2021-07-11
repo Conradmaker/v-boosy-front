@@ -16,6 +16,9 @@ export default {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   list-style: none;
 }
+html{
+  overflow-y: scroll;
+}
 .router-v{
   padding-top:100px;
 }

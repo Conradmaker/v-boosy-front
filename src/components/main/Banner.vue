@@ -3,7 +3,7 @@
         <div class="inner">
             <article>
                 <h1>Buy you'r knowledge</h1>
-                <p>지금 사면 1+1입니다~</p>
+                <p>마음의 양식을 구매해보세요</p>
                 <button>더보기</button>
             </article>
             <img src="../../assets/banner.png" alt="123">
@@ -36,6 +36,7 @@ section{
             font-size: 13px;
         }
         button{
+            cursor: no-drop;
             background:  #BEA895;
             border: none;
             outline:none;
